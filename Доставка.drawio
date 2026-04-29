@@ -1,0 +1,226 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="X0NUkCQvwfHFAL-Q3bHs">
+    <mxGraphModel dx="1664" dy="964" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-40" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.flowchart.on-page_reference;strokeColor=default;fillColor=#330033;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="465" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-41" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка сформирована" vertex="1">
+          <mxGeometry height="60" width="140" x="420" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-42" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-40" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-41" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="780" y="360" as="sourcePoint" />
+            <mxPoint x="830" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер выбрал доставку в системе" vertex="1">
+          <mxGeometry height="30" width="140" x="511.25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-44" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-57" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-60" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="330" />
+            </Array>
+            <mxPoint x="710" y="480" as="sourcePoint" />
+            <mxPoint x="698" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-45" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.flowchart.on-page_reference;strokeColor=default;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="1010" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-46" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.flowchart.on-page_reference;strokeColor=default;fillColor=#330033;" value="" vertex="1">
+          <mxGeometry height="49.99" width="50" x="1015" y="735.01" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Оператор заносит данные о заказе и клиенте в систему" vertex="1">
+          <mxGeometry height="30" width="170" x="511.25" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-48" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-41" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="280" as="sourcePoint" />
+            <mxPoint x="490" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-49" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка ожидает подтверждения" vertex="1">
+          <mxGeometry height="60" width="140" x="420" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-50" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-49" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-52" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="210" />
+            </Array>
+            <mxPoint x="550" y="190" as="sourcePoint" />
+            <mxPoint x="490" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Клиент подтвердил курьеру возможность принять заказ" vertex="1">
+          <mxGeometry height="30" width="140" x="580" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-52" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка подтверждена" vertex="1">
+          <mxGeometry height="60" width="140" x="540" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Клиент не подтвердил курьеру возможность принять заказ" vertex="1">
+          <mxGeometry height="30" width="140" x="410" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-54" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка отложена до подтверждения" vertex="1">
+          <mxGeometry height="60" width="140" x="300" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-55" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-49" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-54" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="330" />
+            </Array>
+            <mxPoint x="530" y="260" as="sourcePoint" />
+            <mxPoint x="650" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-56" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер вручает заказ клиенту" vertex="1">
+          <mxGeometry height="30" width="140" x="680" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-57" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка успешно выполнена" vertex="1">
+          <mxGeometry height="60" width="140" x="820" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-58" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-52" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-57" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="530" as="sourcePoint" />
+            <mxPoint x="600" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-59" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер меняет статус доставки на УСПЕШНО" vertex="1">
+          <mxGeometry height="30" width="140" x="990" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-60" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка в ожидании оплаты курьеру" vertex="1">
+          <mxGeometry height="60" width="140" x="970" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-61" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка оплачена" vertex="1">
+          <mxGeometry height="60" width="140" x="970" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-62" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-60" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-61" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="490" as="sourcePoint" />
+            <mxPoint x="690" y="544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-63" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Бухгалтер делает начисление и перечисляет вознаграждение на счет курьера" vertex="1">
+          <mxGeometry height="30" width="180" x="900" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-64" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-61" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-45" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="490" as="sourcePoint" />
+            <mxPoint x="690" y="544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-65" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-54" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-49" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="330" />
+              <mxPoint x="220" y="210" />
+            </Array>
+            <mxPoint x="480" y="410" as="sourcePoint" />
+            <mxPoint x="530" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-66" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер ожидает подтверждения от клиента" vertex="1">
+          <mxGeometry height="30" width="160" x="210" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-67" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка отменена" vertex="1">
+          <mxGeometry height="60" width="140" x="100" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-68" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-54" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.11;exitY=0.89;exitDx=0;exitDy=0;exitPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-67" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="353" />
+            </Array>
+            <mxPoint x="480" y="410" as="sourcePoint" />
+            <mxPoint x="530" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-69" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер многократно не может получить подтверждения от клиента" vertex="1">
+          <mxGeometry height="30" width="160" x="110" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-70" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка требует переназначения" vertex="1">
+          <mxGeometry height="60" width="140" x="290" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-71" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-54" style="endArrow=classic;html=1;rounded=0;exitX=0.417;exitY=1.031;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-70" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="410" as="sourcePoint" />
+            <mxPoint x="530" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-72" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер отказался от доставки" vertex="1">
+          <mxGeometry height="30" width="160" x="390" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-73" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-70" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-41" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="510" />
+              <mxPoint x="80" y="510" />
+              <mxPoint x="80" y="100" />
+            </Array>
+            <mxPoint x="440" y="460" as="sourcePoint" />
+            <mxPoint x="530" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Диспетчер возвращает доставку в пул свободных доставок" vertex="1">
+          <mxGeometry height="30" width="200" x="150" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-75" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка не выполнена успешно" vertex="1">
+          <mxGeometry height="60" width="140" x="541.25" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-77" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-76" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-75" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="410" as="sourcePoint" />
+            <mxPoint x="470" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-78" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="9gGrxNMLAurRqzu1dKvm-72" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="600" />
+            </Array>
+            <mxPoint x="540" y="600" as="sourcePoint" />
+            <mxPoint x="370" y="361" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-79" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер возвращает заказ на склад до подтверждения от клиента" vertex="1">
+          <mxGeometry height="30" width="200" x="350" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-80" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Доставка в неопределенном состоянии" vertex="1">
+          <mxGeometry height="60" width="140" x="820" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-81" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-57" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-80" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="460" y="430" as="sourcePoint" />
+            <mxPoint x="890" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-82" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьер забывает изменить статус" vertex="1">
+          <mxGeometry height="30" width="140" x="730" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-83" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-80" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-60" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="505" />
+            </Array>
+            <mxPoint x="460" y="670" as="sourcePoint" />
+            <mxPoint x="510" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-84" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Диспетчер делает сверку и подтверждает доставку" vertex="1">
+          <mxGeometry height="30" width="180" x="760" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-87" edge="1" parent="1" source="9gGrxNMLAurRqzu1dKvm-52" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="9gGrxNMLAurRqzu1dKvm-76" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="610" y="360" as="sourcePoint" />
+            <mxPoint x="611" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGrxNMLAurRqzu1dKvm-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Курьеру не удалось&amp;nbsp; вручить заказ клиенту" vertex="1">
+          <mxGeometry height="30" width="140" x="541.25" y="480" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
