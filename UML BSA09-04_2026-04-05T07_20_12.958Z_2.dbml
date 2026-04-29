@@ -1,0 +1,134 @@
+Table Client [headercolor: #175e7a] {
+	client_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи клиента. Генерируется системой автоматически.' ]
+	persona_id integer [ increment, unique, note: 'Внешний ключ на сущность «Персоны». Генерируется системой автоматически.' ]
+	registration_date datetime [ default: `CURRENT_TIMESTAMP`, note: 'Дата и время регистрации клиента в системе' ]
+	status varchar(20) [ default: null, note: 'Отражает текущее состояние записи клиента' ]
+
+	Note: 'Сущность «Клиенты» предназначена для хранения записей о пользователях системы, которые получают услуги барбершопа. Клиенты могут регистрироваться в системе, бронировать слоты обслуживания и получать уведомления в рамках процесса записи и оказания услуги.'
+}
+
+Table Person [headercolor: #175e7a] {
+	persona_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи персоны.  Генерируется системой автоматически.' ]
+	login varchar(50) [ default: null, note: 'Используется для входа в систему; должен быть уникальным' ]
+	password_hash varchar(255) [ default: null, note: 'Хранит хэш пароля пользователя для доступа в систему' ]
+	first_name varchar(50) [ default: null, note: 'Используется для обращения к пользователю' ]
+	middle_name varchar(50) [ not null, note: 'Дополнительное поле для обращения к пользователю' ]
+	phone_number varchar(20) [ default: null, note: 'Используется для направления СМС и дозвона; должен быть уникальным' ]
+	registration_date datetime [ default: `CURRENT_TIMESTAMP`, note: 'Дата и время регистрации пользователя в системе' ]
+	status varchar(20) [ default: null, note: 'Отражает текущее состояние записи персоны' ]
+
+	Note: 'Класс «Персоны» предназначен для хранения общих регистрационных и контактных данных пользователей системы онлайн-записи барбершопа. Данные этого класса используются для регистрации пользователя, входа в систему, обращения к пользователю по имени, а также для отправки уведомлений и связи по номеру телефона.'
+}
+
+Table Employee [headercolor: #175e7a] {
+	employee_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи сотрудника. Генерируется системой автоматически.' ]
+	persona_id integer [ unique, default: null, note: 'Внешний ключ на сущность «Персоны». Генерируется системой автоматически.' ]
+	registration_date datetime [ default: `CURRENT_TIMESTAMP`, note: 'Дата и время регистрации сотрудника в системе' ]
+	status varchar(20) [ default: 'active', note: 'Отражает текущее состояние записи сотрудника' ]
+
+	Note: 'Сущность «Сотрудники» предназначена для хранения записей о работниках барбершопа, которые участвуют в оказании услуг и сопровождении записи клиентов. В рамках задачи сотрудники используют систему при формировании расписания, оказании услуг и взаимодействии с клиентами; конкретная роль сотрудника определяется отдельно в сущности «Роли сотрудника».'
+}
+
+Table Service_slot [headercolor: #175e7a] {
+	service_slot_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи слота обслуживания. Генерируется системой автоматически.' ]
+	slot_date date [ note: 'Дата, на которую создан слот обслуживания' ]
+	service_id integer [ not null, unique, note: 'Какая услуга выбрана конкретно в этом слоте. Необходим для связи с сущностью "Услуги"' ]
+	start_time time [ default: null, note: 'Время начала слота; длительность слота по условию задачи составляет 1 час' ]
+	employee_id integer [ increment, unique, note: 'Внешний ключ на сущность «Сотрудники»; указывает мастера, за которым закреплён слот' ]
+	client_id integer [ not null, unique, note: 'Внешний ключ на сущность «Клиенты»; может быть пустым для свободного слота' ]
+	status varchar(20) [ default: 'free', note: 'Отражает текущее состояние записи слота обслуживания, например: free, booked, cancelled, completed' ]
+
+	Note: 'Сущность «Слоты обслуживания» предназначена для хранения интервалов времени длительностью 1 час, доступных для записи клиентов на обслуживание. Слоты формируются менеджером для конкретного мастера и используются клиентом при выборе и бронировании времени визита.'
+}
+
+Table Service [headercolor: #175e7a] {
+	service_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи услуги. Генерируется системой автоматически.' ]
+	service_name varchar(100) [ unique, default: null, note: 'Наименование услуги, доступной для выбора в системе' ]
+	status varchar(20) [ default: 'active', note: 'Отражает текущее состояние записи услуги' ]
+
+	Note: 'Сущность «Услуги» предназначена для хранения справочника доступных услуг барбершопа. Записи этой сущности используются при выборе услуги клиентом и при определении перечня услуг, которые оказывает конкретный мастер.'
+}
+
+Table Employee_role [headercolor: #175e7a] {
+	employee_role_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи роли сотрудника. Генерируется системой автоматически.' ]
+	employee_id integer [ unique, default: null, note: 'Внешний ключ на сущность «Сотрудники»' ]
+	role_name varchar(20) [ unique, default: null, note: 'Допустимые значения: «мастер», «менеджер»' ]
+	status varchar(20) [ default: 'active', note: 'Отражает текущее состояние записи роли сотрудника' ]
+
+	Note: 'Сущность «Роли сотрудника» предназначена для определения роли сотрудника в системе. Записи этой сущности используются для различения сотрудников с ролью «мастер» и «менеджер», в том числе при формировании расписания и выборе мастера для оказания услуги.'
+}
+
+Table Master_service [headercolor: #175e7a] {
+	master_service_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи связи сотрудника и услуги' ]
+	employee_id integer [ unique, default: null, note: 'Внешний ключ на сущность «Сотрудники»' ]
+	service_id integer [ unique, default: null, note: 'Внешний ключ на сущность «Услуги»' ]
+	status varchar(20) [ default: 'active', note: 'Отражает текущее состояние записи услуги' ]
+
+	Note: 'Сущность «Услуги мастера» предназначена для хранения связей между сотрудниками и услугами, которые они оказывают. Записи этой сущности позволяют определить, какие услуги выполняет конкретный мастер, и используются при выборе услуги и мастера в процессе бронирования.'
+}
+
+Table Discount [headercolor: #175e7a] {
+	discount_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор записи о скидке. Генерируется системой автоматически.' ]
+	client_id integer [ unique, default: null, note: 'Внешний ключ на сущность «Клиенты»' ]
+	discount_type varchar(30) [ default: 'percentage', note: 'percentage (процент), fixed (фиксированная сумма), service (на конкретную услугу)' ]
+	discount_value decimal(10,2) [ default: 0, note: 'Величина: 15.00 для 15%, или 500.00 для 500 руб.' ]
+	start_date datetime [ default: `CURRENT_TIMESTAMP`, note: 'Дата и время, с которой скидка становится активной' ]
+	end_date datetime [ default: null, note: 'Если NULL — бессрочная скидка' ]
+	status varchar(20) [ default: 'active', note: 'active, expired, used_up, cancelled' ]
+
+	Note: 'Предназначена для хранения информации о персональных скидках, акциях и специальных предложениях, предоставляемых конкретным клиентам. Система может применять скидку автоматически при бронировании или оплате услуги. Это позволяет стимулировать повторные визиты, удерживать лояльных клиентов и реализовывать маркетинговые кампании.'
+}
+
+Table Notification [headercolor: #175e7a] {
+	notification_id integer [ pk, increment, not null, unique, note: 'Уникальный идентификатор извещения. Генерируется системой автоматически.' ]
+	client_id integer [ unique, default: null, note: 'Внешний ключ на сущность «Клиенты»' ]
+	notification_type varchar(30) [ note: 'registration, booking_confirmation, reminder, reschedule, feedback_request, promo, manual' ]
+	channel varchar(20) [ note: 'telegram, whatsapp, vk, sms' ]
+	recipient_address varchar(100) [ note: 'Номер телефона, ID в Telegram, email и т.д. (фактический адрес доставки)' ]
+	subject varchar(200) [ default: null, note: 'Тема сообщения . Для SMS может быть NULL' ]
+	message_body text(65535) [ note: 'Полный текст отправленного сообщения' ]
+	sent_at datetime [ default: `CURRENT_TIMESTAMP`, note: 'Когда система инициировала отправку' ]
+	delivered_status varchar(20) [ default: 'pending', note: 'pending, delivered, failed, read' ]
+
+	Note: 'Предназначена для хранения информации о всех автоматических и ручных сообщениях, отправленных клиенту в рамках процесса записи, напоминания, информирования об изменениях или сборе обратной связи. Это обеспечивает логирование коммуникаций, возможность повторной отправки и аудит взаимодействия с клиентом. '
+}
+
+Ref fk_Client_persona_id_Person {
+	Client.persona_id - Person.persona_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Employee_persona_id_Person {
+	Employee.persona_id - Person.persona_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Service_slot_employee_id_Employee {
+	Service_slot.employee_id > Employee.employee_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Service_slot_client_id_Client {
+	Service_slot.client_id > Client.client_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Employee_role_employee_id_Employee {
+	Employee_role.employee_id > Employee.employee_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Master_service_employee_id_Employee {
+	Master_service.employee_id > Employee.employee_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Service_service_id_Master_service {
+	Service.service_id < Master_service.service_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Service_service_id_Service_slot {
+	Service.service_id < Service_slot.service_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Discount_client_id_Client {
+	Discount.client_id > Client.client_id [ delete: no action, update: no action ]
+}
+
+Ref fk_Notification_client_id_Client {
+	Notification.client_id > Client.client_id [ delete: no action, update: no action ]
+}
